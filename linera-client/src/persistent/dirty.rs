@@ -2,11 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 #[derive(Clone, Debug, PartialEq, Eq, derive_more::Deref, derive_more::DerefMut)]
-pub struct Dirty(
-    #[deref]
-    #[deref_mut]
-    bool,
-);
+pub struct Dirty(#[deref] bool);
 
 impl Dirty {
     pub fn new(dirty: bool) -> Self {
